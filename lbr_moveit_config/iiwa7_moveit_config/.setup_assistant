@@ -5,9 +5,9 @@ moveit_setup_assistant_config:
   srdf:
     relative_path: config/iiwa7.srdf
   package_settings:
-    author_name: mhubii
-    author_email: martin.huber@kcl.ac.uk
-    generated_timestamp: 1690638243
+    author_name: Hantao Ye
+    author_email: hantaoye@usc.edu
+    generated_timestamp: 1713568857
   control_xacro:
     command:
       - position
