@@ -14,6 +14,8 @@ Panels:
       - /Current View1
     Name: Views
     Splitter Ratio: 0.5
+  - Class: rviz_visual_tools/RvizVisualToolsGui
+    Name: RvizVisualToolsGui
 Visualization Manager:
   Class: ""
   Displays:
@@ -114,7 +116,7 @@ Visualization Manager:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-        Loop Animation: true
+        Loop Animation: false
         Robot Alpha: 0.5
         Robot Color: 150; 50; 150
         Show Robot Collision: false
@@ -138,7 +140,7 @@ Visualization Manager:
         Interactive Marker Size: 0
         Joint Violation Color: 255; 0; 255
         Planning Group: arm
-        Query Goal State: true
+        Query Goal State: false
         Query Start State: false
         Show Workspace: false
         Start State Alpha: 1
@@ -264,6 +266,8 @@ Window Geometry:
   MotionPlanning - Trajectory Slider:
     collapsed: false
   QMainWindow State: 000000ff00000000fd0000000100000000000002b4000003b9fc0200000005fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000004100fffffffb000000100044006900730070006c006100790073010000003d0000020f000000c900fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670100000252000001a40000017d00fffffffb0000000800480065006c0070000000029a0000006e0000006e00fffffffb0000000a005600690065007700730000000339000000bd000000a400ffffff000004c6000003b900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  RvizVisualToolsGui:
+    collapsed: false
   Views:
     collapsed: false
   Width: 1920
