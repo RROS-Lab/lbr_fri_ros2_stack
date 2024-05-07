@@ -18,9 +18,9 @@ bool CommandGuard::is_valid_command(const_idl_command_t_ref lbr_command,
     if (!command_in_position_limits_(lbr_command, lbr_state)) {
       return false;
     }
-    if (!command_in_velocity_limits_(lbr_command, lbr_state)) {
-      return false;
-    }
+    // if (!command_in_velocity_limits_(lbr_command, lbr_state)) {
+    //   return false;
+    // }
     return true;
 #if FRICLIENT_VERSION_MAJOR == 2
   case KUKA::FRI::EClientCommandMode::CARTESIAN_POSE:
