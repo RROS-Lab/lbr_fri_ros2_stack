@@ -24,7 +24,7 @@ struct CommandGuardParameters {
   jnt_name_array_t joint_names;                         /**< Joint names.*/
   jnt_array_t min_position{0., 0., 0., 0., 0., 0., 0.}; /**< Minimum joint position [rad].*/
   jnt_array_t max_position{0., 0., 0., 0., 0., 0., 0.}; /**< Maximum joint position [rad].*/
-  jnt_array_t max_velocity{0., 0., 0., 0., 0., 0., 0.}; /**< Maximum joint velocity [rad/s].*/
+  jnt_array_t max_velocity{1.4835298641951802, 1.4835298641951802, 1.7453292519943295, 1.3089969389957472, 2.2689280275926285, 2.3561944901923448, 2.3561944901923448}; /**< Maximum joint velocity [rad/s].*/
   jnt_array_t max_torque{0., 0., 0., 0., 0., 0., 0.};   /**< Maximum joint torque [Nm].*/
 };
 
