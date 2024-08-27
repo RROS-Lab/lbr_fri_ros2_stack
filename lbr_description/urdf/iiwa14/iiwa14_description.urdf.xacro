@@ -32,19 +32,18 @@
 
         <link name="link_0">
             <inertial>
-                <origin rpy="0 0 0" xyz="-0.012822 0.0 0.071507" />
-                <mass value="7.050378" />
-                <inertia ixx="0.031226" ixy="0.0" ixz="0.000871" iyy="0.039697" iyz="0.0"
-                    izz="0.043102" />
+                <origin xyz="-0.1 0 0.07" rpy="0 0 0" />
+                <mass value="5" />
+                <inertia ixx="0.05" ixy="0" ixz="0" iyy="0.06" iyz="0" izz="0.03" />
             </inertial>
             <visual>
-                <origin rpy="0 0 0" xyz="0 0 0" />
+                <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                    <mesh filename="package://lbr_description/meshes/iiwa14/visual/link_0.dae" />
+                    <mesh filename="package://lbr_description/meshes/iiwa14/visual/link_0.stl" />
                 </geometry>
             </visual>
             <collision>
-                <origin rpy="0 0 0" xyz="0 0 0" />
+                <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
                     <mesh filename="package://lbr_description/meshes/iiwa14/collision/link_0.stl" />
                 </geometry>
@@ -52,10 +51,10 @@
         </link>
 
         <joint name="A1" type="revolute">
-            <origin rpy="0 0 0" xyz="0.0 0.0 0.1475" />
+            <origin xyz="0 0 0.1575" rpy="0 0 0" />
             <parent link="link_0" />
             <child link="link_1" />
-            <axis xyz="0.0 0.0 1.0" />
+            <axis xyz="0 0 1" />
             <limit effort="${effort_limit}" lower="${-A1_position_limit * PI / 180}"
                 upper="${A1_position_limit * PI / 180}"
                 velocity="${A1_velocity_limit * PI / 180}" />
@@ -64,19 +63,18 @@
 
         <link name="link_1">
             <inertial>
-                <origin rpy="0 0 0" xyz="0.0 -0.033795 0.132404" />
-                <mass value="5.289529" />
-                <inertia ixx="0.042462" ixy="0.0" ixz="0.0" iyy="0.042838" iyz="0.006341"
-                    izz="0.01587" />
+                <origin xyz="0 -0.03 0.12" rpy="0 0 0" />
+                <mass value="5.76" />
+                <inertia ixx="0.0333" ixy="0" ixz="0" iyy="0.033" iyz="0" izz="0.0123" />
             </inertial>
             <visual>
-                <origin rpy="0 0 0" xyz="0.0 0.0 -0.1475" />
+                <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                    <mesh filename="package://lbr_description/meshes/iiwa14/visual/link_1.dae" />
+                    <mesh filename="package://lbr_description/meshes/iiwa14/visual/link_1.stl" />
                 </geometry>
             </visual>
             <collision>
-                <origin rpy="0 0 0" xyz="0.0 0.0 -0.1475" />
+                <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
                     <mesh filename="package://lbr_description/meshes/iiwa14/collision/link_1.stl" />
                 </geometry>
@@ -84,10 +82,10 @@
         </link>
 
         <joint name="A2" type="revolute">
-            <origin rpy="0 0 0" xyz="0.0 -0.01 0.2125" />
+            <origin xyz="0 0 0.2025" rpy="${PI / 2}   0 ${PI}" />
             <parent link="link_1" />
             <child link="link_2" />
-            <axis xyz="0.0 1.0 0.0" />
+            <axis xyz="0 0 1" />
             <limit effort="${effort_limit}" lower="${-A2_position_limit * PI / 180}"
                 upper="${A2_position_limit * PI / 180}"
                 velocity="${A2_velocity_limit * PI / 180}" />
@@ -96,19 +94,18 @@
 
         <link name="link_2">
             <inertial>
-                <origin rpy="0 0 0" xyz="0.000136 0.047548 0.076322" />
-                <mass value="5.688888" />
-                <inertia ixx="0.055182" ixy="-3.3e-05" ixz="5.6e-05" iyy="0.053983" iyz="0.010034"
-                    izz="0.016523" />
+                <origin xyz="0.0003 0.059 0.042" rpy="0 0 0" />
+                <mass value="4" />
+                <inertia ixx="0.05" ixy="0" ixz="0" iyy="0.018" iyz="0" izz="0.044" />
             </inertial>
             <visual>
-                <origin rpy="0 0 0" xyz="0.0 0.01 -0.36" />
+                <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                    <mesh filename="package://lbr_description/meshes/iiwa14/visual/link_2.dae" />
+                    <mesh filename="package://lbr_description/meshes/iiwa14/visual/link_2.stl" />
                 </geometry>
             </visual>
             <collision>
-                <origin rpy="0 0 0" xyz="0.0 0.01 -0.36" />
+                <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
                     <mesh filename="package://lbr_description/meshes/iiwa14/collision/link_2.stl" />
                 </geometry>
@@ -116,10 +113,10 @@
         </link>
 
         <joint name="A3" type="revolute">
-            <origin rpy="0 0 0" xyz="0.0 0.01 0.228" />
+            <origin xyz="0 0.2045 0" rpy="${PI / 2} 0 ${PI}" />
             <parent link="link_2" />
             <child link="link_3" />
-            <axis xyz="0.0 0.0 1.0" />
+            <axis xyz="0 0 1" />
             <limit effort="${effort_limit}" lower="${-A3_position_limit * PI / 180}"
                 upper="${A3_position_limit * PI / 180}"
                 velocity="${A3_velocity_limit * PI / 180}" />
@@ -128,19 +125,18 @@
 
         <link name="link_3">
             <inertial>
-                <origin rpy="0 0 0" xyz="0.0 0.034913 0.123108" />
-                <mass value="3.461245" />
-                <inertia ixx="0.02172" ixy="0.0" ixz="0.0" iyy="0.02073" iyz="-0.003845"
-                    izz="0.007701" />
+                <origin xyz="0 0.03 0.13" rpy="0 0 0" />
+                <mass value="3" />
+                <inertia ixx="0.08" ixy="0" ixz="0" iyy="0.075" iyz="0" izz="0.01" />
             </inertial>
             <visual>
-                <origin rpy="0 0 0" xyz="0.0 0.0 -0.588" />
+                <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                    <mesh filename="package://lbr_description/meshes/iiwa14/visual/link_3.dae" />
+                    <mesh filename="package://lbr_description/meshes/iiwa14/visual/link_3.stl" />
                 </geometry>
             </visual>
             <collision>
-                <origin rpy="0 0 0" xyz="0.0 0.0 -0.588" />
+                <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
                     <mesh filename="package://lbr_description/meshes/iiwa14/collision/link_3.stl" />
                 </geometry>
@@ -148,10 +144,10 @@
         </link>
 
         <joint name="A4" type="revolute">
-            <origin rpy="0 0 0" xyz="0.0 0.0105 0.192" />
+            <origin xyz="0 0 0.2155" rpy="${PI / 2} 0 0" />
             <parent link="link_3" />
             <child link="link_4" />
-            <axis xyz="0.0 -1.0 0.0" />
+            <axis xyz="0 0 1" />
             <limit effort="${effort_limit}" lower="${-A4_position_limit * PI / 180}"
                 upper="${A4_position_limit * PI / 180}"
                 velocity="${A4_velocity_limit * PI / 180}" />
@@ -160,19 +156,18 @@
 
         <link name="link_4">
             <inertial>
-                <origin rpy="0 0 0" xyz="0.0 -0.039793 0.086944" />
-                <mass value="4.122995" />
-                <inertia ixx="0.03241" ixy="0.0" ixz="0.0" iyy="0.030758" iyz="-0.006022"
-                    izz="0.009883" />
+                <origin xyz="0 0.067 0.034" rpy="0 0 0" />
+                <mass value="2.7" />
+                <inertia ixx="0.03" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.029" />
             </inertial>
             <visual>
-                <origin rpy="0 0 0" xyz="0.0 -0.0105 -0.78" />
+                <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                    <mesh filename="package://lbr_description/meshes/iiwa14/visual/link_4.dae" />
+                    <mesh filename="package://lbr_description/meshes/iiwa14/visual/link_4.stl" />
                 </geometry>
             </visual>
             <collision>
-                <origin rpy="0 0 0" xyz="0.0 -0.0105 -0.78" />
+                <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
                     <mesh filename="package://lbr_description/meshes/iiwa14/collision/link_4.stl" />
                 </geometry>
@@ -180,10 +175,10 @@
         </link>
 
         <joint name="A5" type="revolute">
-            <origin rpy="0 0 0" xyz="0.0 -0.0105 0.2075" />
+            <origin xyz="0 0.1845 0" rpy="${-PI / 2} ${PI} 0" />
             <parent link="link_4" />
             <child link="link_5" />
-            <axis xyz="0.0 0.0 1.0" />
+            <axis xyz="0 0 1" />
             <limit effort="${effort_limit}" lower="${-A5_position_limit * PI / 180}"
                 upper="${A5_position_limit * PI / 180}"
                 velocity="${A5_velocity_limit * PI / 180}" />
@@ -192,19 +187,18 @@
 
         <link name="link_5">
             <inertial>
-                <origin rpy="0 0 0" xyz="0.0 -0.029824 0.076267" />
-                <mass value="1.563756" />
-                <inertia ixx="0.008677" ixy="0.0" ixz="0.0" iyy="0.007297" iyz="0.002869"
-                    izz="0.003935" />
+                <origin xyz="0.0001 0.021 0.076" rpy="0 0 0" />
+                <mass value="1.7" />
+                <inertia ixx="0.02" ixy="0" ixz="0" iyy="0.018" iyz="0" izz="0.005" />
             </inertial>
             <visual>
-                <origin rpy="0 0 0" xyz="0.0 0.0 -0.9875" />
+                <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                    <mesh filename="package://lbr_description/meshes/iiwa14/visual/link_5.dae" />
+                    <mesh filename="package://lbr_description/meshes/iiwa14/visual/link_5.stl" />
                 </geometry>
             </visual>
             <collision>
-                <origin rpy="0 0 0" xyz="0.0 0.0 -0.9875" />
+                <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
                     <mesh filename="package://lbr_description/meshes/iiwa14/collision/link_5.stl" />
                 </geometry>
@@ -212,10 +206,10 @@
         </link>
 
         <joint name="A6" type="revolute">
-            <origin rpy="0 0 0" xyz="0.0 -0.0707 0.1925" />
+            <origin xyz="0 0 0.2155" rpy="${PI / 2} 0 0" />
             <parent link="link_5" />
             <child link="link_6" />
-            <axis xyz="0.0 1.0 0.0" />
+            <axis xyz="0 0 1" />
             <limit effort="${effort_limit}" lower="${-A6_position_limit * PI / 180}"
                 upper="${A6_position_limit * PI / 180}"
                 velocity="${A6_velocity_limit * PI / 180}" />
@@ -224,19 +218,18 @@
 
         <link name="link_6">
             <inertial>
-                <origin rpy="0 0 0" xyz="0.0 0.07102 0.00495" />
-                <mass value="2.457878" />
-                <inertia ixx="0.007227" ixy="0.0" ixz="0.0" iyy="0.006958" iyz="0.000318"
-                    izz="0.004734" />
+                <origin xyz="0 0.0006 0.0004" rpy="0 0 0" />
+                <mass value="1.8" />
+                <inertia ixx="0.005" ixy="0" ixz="0" iyy="0.0036" iyz="0" izz="0.0047" />
             </inertial>
             <visual>
-                <origin rpy="0 0 0" xyz="0.0 0.0707 -1.18" />
+                <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                    <mesh filename="package://lbr_description/meshes/iiwa14/visual/link_6.dae" />
+                    <mesh filename="package://lbr_description/meshes/iiwa14/visual/link_6.stl" />
                 </geometry>
             </visual>
             <collision>
-                <origin rpy="0 0 0" xyz="0.0 0.0707 -1.18" />
+                <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
                     <mesh filename="package://lbr_description/meshes/iiwa14/collision/link_6.stl" />
                 </geometry>
@@ -244,10 +237,10 @@
         </link>
 
         <joint name="A7" type="revolute">
-            <origin rpy="0 0 0" xyz="0.0 0.0707 0.091" />
+            <origin xyz="0 0.081 0" rpy="${- PI / 2} ${PI} 0" />
             <parent link="link_6" />
             <child link="link_7" />
-            <axis xyz="0.0 0.0 1.0" />
+            <axis xyz="0 0 1" />
             <limit effort="${effort_limit}" lower="${-A7_position_limit * PI / 180}"
                 upper="${A7_position_limit * PI / 180}"
                 velocity="${A7_velocity_limit * PI / 180}" />
@@ -256,18 +249,18 @@
 
         <link name="link_7">
             <inertial>
-                <origin rpy="0 0 0" xyz="3.0000e-06 -2.0000e-06 1.3782e-02" />
-                <mass value="0.265331" />
-                <inertia ixx="0.000175" ixy="0.0" ixz="0.0" iyy="0.000175" iyz="0.0" izz="0.000306" />
+                <origin xyz="0 0 0.02" rpy="0 0 0" />
+                <mass value="0.3" />
+                <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
             </inertial>
             <visual>
-                <origin rpy="0 0 0" xyz="0.0 0.0 -1.271" />
+                <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                    <mesh filename="package://lbr_description/meshes/iiwa14/visual/link_7.dae" />
+                    <mesh filename="package://lbr_description/meshes/iiwa14/visual/link_7.stl" />
                 </geometry>
             </visual>
             <collision>
-                <origin rpy="0 0 0" xyz="0.0 0.0 -1.271" />
+                <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
                     <mesh filename="package://lbr_description/meshes/iiwa14/collision/link_7.stl" />
                 </geometry>
@@ -277,7 +270,7 @@
         <joint name="joint_ee" type="fixed">
             <parent link="link_7" />
             <child link="link_ee" />
-            <origin xyz="0 0 0.035" rpy="0 0 0" />
+            <origin xyz="0 0 0.045" rpy="0 0 0" />
         </joint>
 
         <link name="link_ee">
